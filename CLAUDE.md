@@ -90,10 +90,17 @@ Single-page layout with five anchor-linked sections: `#service`, `#works`, `#str
 
 を優先すること。
 
-## Deployment checklist
+## Deployment
 
-Before going live, update these placeholder values:
-- `<link rel="canonical">` href in `<head>`
-- `og:image` (not yet added)
-- `sitemap.xml` and `robots.txt` — replace `yourdomain.com` with the real domain
-- Schema.org JSON-LD `"url"` field in `<head>`
+- **公開URL**: https://maeda-portfolio.vercel.app/
+- **GitHub**: https://github.com/kazu-maeda/maeda-portfolio
+
+GitHubリポジトリ(`kazu-maeda/maeda-portfolio`)にpushすると、Vercel側で自動的に本番反映される。
+静的サイトのため`vercel.json`やビルド設定は不要(Framework Preset: `Other`)。
+
+`.playwright-mcp/`(ブラウザ確認時のログ・スナップショット)と`.claude/settings.local.json`はリポジトリ・デプロイ対象から除外している(`.gitignore` / `.vercelignore`)。
+
+### 残タスク
+
+- `og:image`が未設定(SNSシェア時のサムネイルが出ない)
+- カスタムドメインを取得した場合は、`index.html`の`canonical` / `og:url` / Schema.org `url`、`sitemap.xml`、`robots.txt`内のURLをすべて差し替えること
