@@ -40,7 +40,7 @@ Single-page layout with five anchor-linked sections: `#service`, `#works`, `#str
 - `index.html` — all markup and inline SVG icons; structured with BEM-style class names
 - `css/style.css` — all styles; no preprocessor
 - `js/main.js` — three behaviors: header shadow on scroll, hamburger menu (mobile), fade-in via IntersectionObserver, and smooth-scroll offset accounting for the fixed header height
-- `sitemap.xml` / `robots.txt` — SEO; the placeholder domain `yourdomain.com` must be replaced before deployment
+- `sitemap.xml` / `robots.txt` — SEO; URLs point at the production domain (see Deployment section)
 
 **CSS conventions:**
 - All design tokens live in `:root` custom properties at the top of `style.css` (colors, fonts, spacing, shadows, transition duration)
@@ -104,3 +104,12 @@ GitHubリポジトリ(`kazu-maeda/maeda-portfolio`)にpushすると、Vercel側�
 
 - `og:image`が未設定(SNSシェア時のサムネイルが出ない)
 - カスタムドメインを取得した場合は、`index.html`の`canonical` / `og:url` / Schema.org `url`、`sitemap.xml`、`robots.txt`内のURLをすべて差し替えること
+
+## 作業ログ
+
+### 2026-09-17
+
+- 実績セクションにCORE SHIFT・noa LPの2件を追加。各サイトの公開URL(`coreshift-blue.vercel.app` / `noalp.vercel.app`)をPlaywrightでスクリーンショット撮影し、既存実績画像と同じ960×600のJPEGに変換して`images/works/coreshift.jpg` / `noalp.jpg`として追加
+- 未git管理だったこのリポジトリを`git init` → GitHub(`kazu-maeda/maeda-portfolio`)に作成・push
+- Vercelプロジェクト`kazuya-m1/maeda-portfolio`を作成し、GitHub連携 → 本番デプロイ(`vercel --prod`)。`.vercelignore`を用意した上でデプロイしたため、2.4MB・16ファイルの軽量デプロイで完了(過去のnoaLP初回デプロイで`.vercelignore`未整備によりデザインカンプ元ファイルまで巻き込んだ反省を踏まえ、今回は最初から用意)
+- デプロイ前チェックリストにあった`yourdomain.com`のプレースホルダー(canonical / og:url / Schema.org url / sitemap.xml / robots.txt)を実URL(`https://maeda-portfolio.vercel.app/`)に置き換え
