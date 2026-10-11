@@ -589,6 +589,86 @@ button {
   gap: 10px;
 }
 
+/* Works: 画面の無い実績（EC運営の仕組みづくり） */
+.works__sub {
+  margin-top: 80px;
+}
+
+.works__sub-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.works__sub-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  font-weight: 600;
+  color: var(--color-black);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.works__sub-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  max-width: 560px;
+  margin-inline: auto;
+  line-height: 1.9;
+}
+
+.works__case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.works__case {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: 32px;
+}
+
+.works__case-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-black);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.works__case-text {
+  font-size: 0.875rem;
+  color: var(--color-gray-dark);
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.works__case-result {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-black);
+  line-height: 1.7;
+}
+
+.works__case-result-label {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--color-gray);
+}
+
 /* ==============================================
    Section CTA (works / pricing 末尾)
    ============================================== */
@@ -1060,6 +1140,19 @@ button {
   .works__grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .works__sub {
+    margin-top: 56px;
+  }
+
+  .works__case-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .works__case {
+    padding: 28px 24px;
   }
 
   /* Strengths mobile */
