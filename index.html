@@ -328,56 +328,260 @@
           <div class="works__sub-header fade-in">
             <p class="section-header__label">Automation</p>
             <h3 class="works__sub-title">EC運営の仕組みづくり</h3>
-            <p class="works__sub-desc">自社ECの運営で実際に使っている、手作業を減らすための仕組みです。管理画面の内側で動くものなので、内容を文章でご紹介します。</p>
+            <p class="works__sub-desc">自社EC（国内：カラーミーショップ／海外：Shopify）の運営で、実際に動かしている仕組みです。困りごとごとに、課題・仕組み・成果をまとめました。</p>
           </div>
 
-          <div class="works__case-grid">
+          <!-- 01 数字を見える化する -->
+          <div class="works__group">
+            <div class="works__group-header fade-in">
+              <span class="works__group-num">01</span>
+              <h4 class="works__group-title">数字を見える化する</h4>
+            </div>
 
-            <article class="works__case fade-in">
-              <h4 class="works__case-title">2店舗の在庫を自動でそろえる仕組み</h4>
-              <ul class="works__tags">
-                <li class="works__tag">カラーミーショップ</li>
-                <li class="works__tag">Shopify</li>
-                <li class="works__tag">Google Apps Script</li>
-              </ul>
-              <p class="works__case-text">国内向け（カラーミーショップ）と海外向け（Shopify）で同じ在庫を販売しているため、在庫数を手で合わせる必要がありました。両店の商品を「品番・色・サイズ」で自動的に対応づけ、15分おきに在庫数をそろえる仕組みを構築。毎朝、両店の在庫が合っているかをメールで報告します。</p>
-              <p class="works__case-result"><span class="works__case-result-label">成果</span>97商品・244サイズの在庫を自動で管理</p>
+            <article class="works__feature fade-in">
+              <div class="works__feature-body">
+                <h5 class="works__case-title">週次レポートの自動作成</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">1<span class="works__stat-unit">枚</span></span>
+                  <span class="works__stat-label">売上・在庫・検索の数字を、毎週PDF1枚にまとめて自動で届ける</span>
+                </p>
+                <div class="works__flow" role="img" aria-label="仕組みの流れ：カラーミーショップ・Shopify・Search Console から、毎週水曜に集計し、PDF をメールで届ける">
+                  <span class="works__flow-node">2店舗の<br>売上・在庫<br>＋検索</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→<small>毎週</small></span>
+                  <span class="works__flow-node">集計して<br>前週と<br>比べる</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→</span>
+                  <span class="works__flow-node">PDFを<br>メールで<br>届ける</span>
+                </div>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>売上は2つのショップの管理画面、検索の数字はSearch Consoleと、見る場所がばらばら。毎週集めるのは手間で、変化にも気づきにくい状態でした。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>毎週水曜の朝、両店の売上と売れた商品・残りの在庫、国内と海外サイトの検索のクリック数・掲載順位を集計。前の週と比べて増減を色分けしたA4のPDFを、メールで届けます。そのまま印刷して打ち合わせに使えます。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">Google Apps Script</li>
+                  <li class="works__tag">Search Console API</li>
+                  <li class="works__tag">Shopify Admin API</li>
+                  <li class="works__tag">カラーミーショップAPI</li>
+                </ul>
+              </div>
+              <figure class="works__feature-image">
+                <a href="images/works/weekly-report.webp" target="_blank" rel="noopener">
+                  <img src="images/works/weekly-report.webp" alt="週次レポートのPDFの1ページ目。売上、この週に売れた商品と今の在庫、在庫数、Google検索のクリック数と掲載順位が表にまとまっている" loading="lazy" width="1200" height="1381">
+                </a>
+                <figcaption>レポートの1ページ目（見本。数値・商品名はダミーです）</figcaption>
+              </figure>
             </article>
-
-            <article class="works__case fade-in">
-              <h4 class="works__case-title">Shopifyへの商品登録をまとめて下書き作成</h4>
-              <ul class="works__tags">
-                <li class="works__tag">Shopify</li>
-                <li class="works__tag">Admin API</li>
-                <li class="works__tag">Googleスプレッドシート</li>
-              </ul>
-              <p class="works__case-text">国内向けの商品情報から、海外向けの商品名・英語の説明文・サイズごとのSKU・在庫数・画像・カテゴリーを組み立て、Shopifyに下書きとして作成。スプレッドシートで価格を入れてチェックを付けるだけで登録でき、公開前の確認は人の手に残しています。</p>
-              <p class="works__case-result"><span class="works__case-result-label">成果</span>15商品を一度に登録。1項目ずつの入力が不要に</p>
-            </article>
-
-            <article class="works__case fade-in">
-              <h4 class="works__case-title">Googleショッピングへの自動掲載</h4>
-              <ul class="works__tags">
-                <li class="works__tag">カラーミーショップ</li>
-                <li class="works__tag">Google Merchant Center</li>
-                <li class="works__tag">Googleスプレッドシート</li>
-              </ul>
-              <p class="works__case-text">毎朝、ショップの最新の商品情報をスプレッドシートに書き出し、Google Merchant Center が読み込む仕組みを構築。商品を登録するだけで、Googleショッピングの無料リスティングに広告費なしで掲載されます。</p>
-              <p class="works__case-result"><span class="works__case-result-label">成果</span>掲載191件すべて承認（不承認0）</p>
-            </article>
-
-            <article class="works__case fade-in">
-              <h4 class="works__case-title">商品登録を助けるChrome拡張機能</h4>
-              <ul class="works__tags">
-                <li class="works__tag">Chrome拡張機能</li>
-                <li class="works__tag">JavaScript</li>
-                <li class="works__tag">AI活用</li>
-              </ul>
-              <p class="works__case-text">カラーミーショップの管理画面に機能を足す拡張機能を開発。色違い商品の作成、商品説明のHTML作成、AIによる説明文・英訳・SEO設定の下書きを、商品編集の画面の中で行えます。Instagramショッピング用の項目も自動で入力します。</p>
-              <p class="works__case-result"><span class="works__case-result-label">成果</span>商品登録の作業を1つの画面に集約</p>
-            </article>
-
           </div>
+
+          <!-- 02 手間を減らす -->
+          <div class="works__group">
+            <div class="works__group-header fade-in">
+              <span class="works__group-num">02</span>
+              <h4 class="works__group-title">手間を減らす</h4>
+            </div>
+
+            <div class="works__case-grid">
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">2店舗の在庫を自動でそろえる仕組み</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">15<span class="works__stat-unit">分おき</span></span>
+                  <span class="works__stat-label">97商品・244サイズの在庫を、両店で自動でそろえる</span>
+                </p>
+                <div class="works__flow" role="img" aria-label="仕組みの流れ：カラーミーショップと Shopify の在庫を、15分おきに双方向でそろえる">
+                  <span class="works__flow-node">カラーミー<br>ショップ</span>
+                  <span class="works__flow-arrow" aria-hidden="true">⇄<small>15分おき</small></span>
+                  <span class="works__flow-node">Shopify</span>
+                </div>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>国内（カラーミーショップ）と海外（Shopify）で同じ在庫を販売。片方で売れるたびに、もう片方の在庫数を手で直す必要がありました。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>両店の商品を「品番・色・サイズ」で自動的に対応づけ、15分おきに在庫数をそろえます。毎朝、両店の在庫が合っているかをメールで報告します。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">カラーミーショップ</li>
+                  <li class="works__tag">Shopify</li>
+                  <li class="works__tag">Google Apps Script</li>
+                </ul>
+              </article>
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">Shopifyへの商品登録をまとめて下書き作成</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">15<span class="works__stat-unit">商品</span></span>
+                  <span class="works__stat-label">を一度に下書き作成。1項目ずつの入力が不要に</span>
+                </p>
+                <div class="works__flow" role="img" aria-label="仕組みの流れ：カラーミーショップの商品を、スプレッドシートで価格を入れて選び、Shopify に下書きとして作成する">
+                  <span class="works__flow-node">国内の<br>商品</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→</span>
+                  <span class="works__flow-node">シートで<br>価格を<br>入力</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→</span>
+                  <span class="works__flow-node">Shopifyに<br>下書き</span>
+                </div>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>海外ショップに載せるたびに、商品名・英語の説明文・サイズ・SKU・画像などを管理画面で1つずつ入力していました。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>国内向けの商品情報から、英語の商品名と説明文、サイズごとのSKU・在庫数・画像・カテゴリーを組み立ててShopifyに下書きを作成。スプレッドシートで価格を入れてチェックを付けるだけです。公開前の確認は人の手に残しています。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">Shopify</li>
+                  <li class="works__tag">Admin API</li>
+                  <li class="works__tag">Googleスプレッドシート</li>
+                </ul>
+              </article>
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">商品登録を助けるChrome拡張機能</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">1<span class="works__stat-unit">画面</span></span>
+                  <span class="works__stat-label">商品登録の作業を、管理画面の中で完結</span>
+                </p>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>色違い商品の作成、商品説明のHTML、英訳、SEO設定を、それぞれ別の場所で作って管理画面に貼り付けていました。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>カラーミーショップの管理画面に機能を足す拡張機能を開発。色違い商品の作成、商品説明のHTML作成、AIによる説明文・英訳・SEO設定の下書きを、商品編集の画面の中で行えます。Instagramショッピング用の項目も自動で入力します。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">Chrome拡張機能</li>
+                  <li class="works__tag">JavaScript</li>
+                  <li class="works__tag">AI活用</li>
+                </ul>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- 03 売上・集客を伸ばす -->
+          <div class="works__group">
+            <div class="works__group-header fade-in">
+              <span class="works__group-num">03</span>
+              <h4 class="works__group-title">売上・集客を伸ばす</h4>
+            </div>
+
+            <div class="works__case-grid">
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">Googleショッピングへの自動掲載</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">191<span class="works__stat-unit">件</span></span>
+                  <span class="works__stat-label">すべて承認（不承認0）。広告費なしで掲載</span>
+                </p>
+                <div class="works__flow" role="img" aria-label="仕組みの流れ：カラーミーショップの商品情報を毎朝スプレッドシートに書き出し、Google Merchant Center が読み込んで Google ショッピングに掲載する">
+                  <span class="works__flow-node">カラーミー</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→<small>毎朝</small></span>
+                  <span class="works__flow-node">スプレッド<br>シート</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→</span>
+                  <span class="works__flow-node">Google<br>ショッピング</span>
+                </div>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>Googleショッピングの無料枠に載せるには、価格・在庫・品番などの商品データを、常に最新の状態でGoogleに渡し続ける必要があります。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>毎朝、ショップの最新の商品情報をスプレッドシートに書き出し、Google Merchant Center が自動で読み込む仕組みを構築。商品を登録するだけで、Googleショッピングに載ります。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">カラーミーショップ</li>
+                  <li class="works__tag">Google Merchant Center</li>
+                  <li class="works__tag">Googleスプレッドシート</li>
+                </ul>
+              </article>
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">海外ショップの検索・ショッピング対策</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">236<span class="works__stat-unit">件</span></span>
+                  <span class="works__stat-label">の商品データを整備。12か国で不承認0</span>
+                </p>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>海外向けのShopifyは、SKUが空、サイズの項目名が日本語、色や性別が未入力など、Googleに商品を正しく伝える情報が足りていませんでした。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>全236バリエーションのSKUと項目名を一括で修正し、色・性別・年齢層をShopifyの標準の項目に入力。Search Consoleで検索の状況を点検し、店名の表示や説明文の崩れも直しました。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">Shopify</li>
+                  <li class="works__tag">Google Merchant Center</li>
+                  <li class="works__tag">Search Console</li>
+                </ul>
+              </article>
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">トップページの新着商品を自動で入れ替え</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">30<span class="works__stat-unit">商品</span></span>
+                  <span class="works__stat-label">在庫のある新着を、自動で新しい順に表示</span>
+                </p>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>トップページの新着商品は手動で選んでいたため、登録を忘れやすく、売り切れた商品も「SOLD OUT」のまま流れていました。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>ページを開いたときに新着順の商品一覧を読み込み、売り切れを除いて新しい順に流すスクリプトを作成。スマホで流れがカクつく原因（既存のCSSとスライダーの余白の計算のずれ）も突き止めて解消しました。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">カラーミーショップ</li>
+                  <li class="works__tag">JavaScript</li>
+                  <li class="works__tag">Swiper</li>
+                </ul>
+              </article>
+
+              <article class="works__case fade-in">
+                <h5 class="works__case-title">同じ生地の商品をセットで提案</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">2<span class="works__stat-unit">店舗</span></span>
+                  <span class="works__stat-label">の商品ページで、合わせ買いを提案</span>
+                </p>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>ジャケットとパンツのように同じ生地の商品があっても、お客様が自分で探さないと気づけませんでした。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>商品ページのカートボタンの下に、同じ生地の別の商品を画像付きで表示。国内はChrome拡張機能で、海外はShopifyのメタフィールドで相手の商品を指定するだけで表示されます。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">カラーミーショップ</li>
+                  <li class="works__tag">Shopify</li>
+                  <li class="works__tag">Liquid</li>
+                </ul>
+              </article>
+
+            </div>
+          </div>
+
         </div>
 
         <div class="section-cta fade-in">

@@ -616,6 +616,36 @@ button {
   line-height: 1.9;
 }
 
+/* 役割ごとのまとまり（01 数字を見える化する など） */
+.works__group {
+  margin-top: 56px;
+}
+
+.works__group-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.works__group-num {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-accent-light);
+}
+
+.works__group-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-black);
+  line-height: 1.5;
+}
+
 .works__case-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -632,41 +662,169 @@ button {
   padding: 32px;
 }
 
+/* 奇数個のときは最後の1件を横いっぱいにし、課題と仕組みを横に並べる */
+.works__case:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.works__case:last-child:nth-child(odd) .works__case-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.works__case:last-child:nth-child(odd) .works__case-detail > div + div {
+  margin-top: 0;
+}
+
 .works__case-title {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-black);
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-.works__case-text {
-  font-size: 0.875rem;
-  color: var(--color-gray-dark);
-  line-height: 1.9;
-  margin-bottom: 24px;
-}
-
-.works__case-result {
+/* 成果の数字 */
+.works__stat {
   display: flex;
   align-items: baseline;
-  gap: 14px;
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid var(--color-border);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-black);
-  line-height: 1.7;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 20px;
 }
 
-.works__case-result-label {
+.works__stat-value {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-accent-dark);
+  white-space: nowrap;
+}
+
+.works__stat-unit {
+  font-size: 0.95rem;
+  margin-left: 2px;
+}
+
+.works__stat-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-black);
+  line-height: 1.6;
+}
+
+/* 仕組みの流れの図 */
+.works__flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+}
+
+.works__flow-node {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 10px 6px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.works__flow-arrow {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-gray);
+}
+
+.works__flow-arrow small {
+  margin-top: 4px;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+/* 課題・仕組み */
+.works__case-detail {
+  margin-bottom: 20px;
+}
+
+.works__case-detail > div + div {
+  margin-top: 14px;
+}
+
+.works__case-detail dt {
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   color: var(--color-gray);
+  margin-bottom: 4px;
+}
+
+.works__case-detail dd {
+  font-size: 0.875rem;
+  color: var(--color-gray-dark);
+  line-height: 1.9;
+}
+
+.works__case .works__tags,
+.works__feature .works__tags {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* 大きく扱う事例（週次レポート） */
+.works__feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: 40px;
+}
+
+.works__feature-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.works__feature-image a {
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.works__feature-image a:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.works__feature-image figcaption {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--color-gray);
+  text-align: center;
 }
 
 /* ==============================================
@@ -1029,6 +1187,16 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .works__feature {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .works__feature-image {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
   .hero__decoration {
     display: none;
   }
@@ -1153,6 +1321,36 @@ button {
 
   .works__case {
     padding: 28px 24px;
+  }
+
+  .works__case:last-child:nth-child(odd) .works__case-detail {
+    display: block;
+  }
+
+  .works__case:last-child:nth-child(odd) .works__case-detail > div + div {
+    margin-top: 14px;
+  }
+
+  .works__group {
+    margin-top: 44px;
+  }
+
+  .works__feature {
+    padding: 28px 24px;
+  }
+
+  .works__stat-value {
+    font-size: 2.1rem;
+  }
+
+  .works__flow {
+    padding: 12px;
+    gap: 6px;
+  }
+
+  .works__flow-node {
+    padding: 8px 4px;
+    font-size: 0.7rem;
   }
 
   /* Strengths mobile */
