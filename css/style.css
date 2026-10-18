@@ -333,7 +333,7 @@ button {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/FV.png');
+  background-image: url('../images/FV.webp');
   background-size: cover;
   background-position: center;
   z-index: 0;

@@ -113,3 +113,7 @@ GitHubリポジトリ(`kazu-maeda/maeda-portfolio`)にpushすると、Vercel側�
 - 未git管理だったこのリポジトリを`git init` → GitHub(`kazu-maeda/maeda-portfolio`)に作成・push
 - Vercelプロジェクト`kazuya-m1/maeda-portfolio`を作成し、GitHub連携 → 本番デプロイ(`vercel --prod`)。`.vercelignore`を用意した上でデプロイしたため、2.4MB・16ファイルの軽量デプロイで完了(過去のnoaLP初回デプロイで`.vercelignore`未整備によりデザインカンプ元ファイルまで巻き込んだ反省を踏まえ、今回は最初から用意)
 - デプロイ前チェックリストにあった`yourdomain.com`のプレースホルダー(canonical / og:url / Schema.org url / sitemap.xml / robots.txt)を実URL(`https://maeda-portfolio.vercel.app/`)に置き換え
+
+### 2026-10-18
+
+- ヒーロー背景画像を`images/FV.png`(1.8MB)から`images/FV.webp`(75KB、1536×1024、cwebp q88)に差し替え。初回表示の転送量の約9割を占めていたため。元PNGとの比較で見た目の差は無し(PSNR 43.9dB)。`FV.png`は戻せるよう残してある(どこからも参照していない)
