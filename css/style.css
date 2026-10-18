@@ -616,6 +616,80 @@ button {
   line-height: 1.9;
 }
 
+/* 全体の構成図（PCは横長、900px以下は縦長の図） */
+.works__map {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 40px;
+}
+
+.works__map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.works__map .works__map-sp {
+  display: none;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.works__map .m-text {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  fill: var(--color-black);
+}
+
+.works__map .m-text--sp {
+  font-size: 13px;
+}
+
+.works__map .m-b   { font-weight: 700; }
+.works__map .m-lg  { font-size: 1.1em; }
+.works__map .m-s   { font-size: 0.9em; fill: var(--color-gray-dark); }
+.works__map .m-inv { fill: #FFFFFF; }
+
+.works__map .m-store { fill: var(--color-accent); }
+.works__map .m-sys   { fill: var(--color-bg); stroke: var(--color-accent); stroke-width: 1.5; }
+.works__map .m-ext   { fill: var(--color-accent-bg); }
+.works__map .m-line  { fill: none; stroke: var(--color-gray-dark); stroke-width: 1.2; }
+.works__map .m-dash  { stroke-dasharray: 4 3; }
+.works__map .m-head  { fill: var(--color-gray-dark); }
+
+.works__map-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-top: 24px;
+  font-size: 0.75rem;
+  color: var(--color-gray);
+}
+
+.works__map-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.works__map-key {
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.works__map-key--store { background-color: var(--color-accent); }
+.works__map-key--sys   { border: 1.5px solid var(--color-accent); }
+.works__map-key--ext   { background-color: var(--color-accent-bg); border: 1px solid var(--color-accent-light); }
+
+.works__map-note {
+  flex-basis: 100%;
+  text-align: center;
+}
+
 /* 役割ごとのまとまり（01 数字を見える化する など） */
 .works__group {
   margin-top: 56px;
@@ -1187,6 +1261,14 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .works__map .works__map-pc {
+    display: none;
+  }
+
+  .works__map .works__map-sp {
+    display: block;
+  }
+
   .works__feature {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1312,6 +1394,10 @@ button {
 
   .works__sub {
     margin-top: 56px;
+  }
+
+  .works__map {
+    padding: 16px 6px;
   }
 
   .works__case-grid {

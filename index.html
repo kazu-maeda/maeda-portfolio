@@ -331,6 +331,163 @@
             <p class="works__sub-desc">自社EC（国内：カラーミーショップ／海外：Shopify）の運営で、実際に動かしている仕組みです。困りごとごとに、課題・仕組み・成果をまとめました。</p>
           </div>
 
+          <!-- 全体の構成図（PCは横長、900px以下は縦長の図に切り替え） -->
+          <figure class="works__map fade-in">
+            <div class="works__map-figure" role="img" aria-label="仕組みの全体図：運営者が Chrome 拡張機能で国内店（カラーミーショップ）に商品を登録。その商品データを元に、Google ショッピングへの掲載、海外店（Shopify）への商品登録、2店舗の在庫連動を自動で行い、週次レポートが両店の数字をまとめて運営者に届ける">
+
+              <svg class="works__map-pc" viewBox="0 0 680 380" aria-hidden="true">
+                <defs>
+                  <marker id="map-arrow-pc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="m-head" d="M0,0 L10,5 L0,10 z"/></marker>
+                </defs>
+                <g class="m-text">
+                  <!-- 運営者 -->
+                  <rect class="m-ext" x="10" y="150" width="88" height="70" rx="8"/>
+                  <text x="54" y="176" text-anchor="middle" class="m-b">運営者</text>
+                  <text x="54" y="194" text-anchor="middle" class="m-s">価格・公開を</text>
+                  <text x="54" y="208" text-anchor="middle" class="m-s">最後に判断</text>
+
+                  <!-- Chrome拡張 -->
+                  <rect class="m-sys" x="120" y="140" width="130" height="90" rx="8"/>
+                  <text x="185" y="160" text-anchor="middle" class="m-b">Chrome拡張機能</text>
+                  <text x="185" y="176" text-anchor="middle" class="m-s">商品登録の補助</text>
+                  <text x="130" y="196" class="m-s">・色違いを複製</text>
+                  <text x="130" y="210" class="m-s">・AIが説明文・英訳</text>
+                  <text x="130" y="224" class="m-s">・説明文の形をそろえる</text>
+                  <line class="m-line" x1="98" y1="185" x2="118" y2="185" marker-end="url(#map-arrow-pc)"/>
+
+                  <!-- 国内店 -->
+                  <rect class="m-store" x="280" y="130" width="130" height="110" rx="8"/>
+                  <text x="345" y="154" text-anchor="middle" class="m-b m-inv m-lg">国内店</text>
+                  <text x="345" y="170" text-anchor="middle" class="m-inv">カラーミーショップ</text>
+                  <text x="345" y="194" text-anchor="middle" class="m-s m-inv">商品データの大元</text>
+                  <text x="345" y="210" text-anchor="middle" class="m-s m-inv">（説明文の形が</text>
+                  <text x="345" y="224" text-anchor="middle" class="m-s m-inv">そろっていて機械が読める）</text>
+                  <line class="m-line" x1="250" y1="185" x2="278" y2="185" marker-end="url(#map-arrow-pc)"/>
+
+                  <!-- 海外店 -->
+                  <rect class="m-store" x="540" y="130" width="130" height="110" rx="8"/>
+                  <text x="605" y="154" text-anchor="middle" class="m-b m-inv m-lg">海外店</text>
+                  <text x="605" y="170" text-anchor="middle" class="m-inv">Shopify（英語・12か国）</text>
+                  <text x="605" y="194" text-anchor="middle" class="m-s m-inv">一部の商品を出品</text>
+                  <text x="605" y="210" text-anchor="middle" class="m-s m-inv">同じ在庫を2店で販売</text>
+
+                  <!-- 商品登録 -->
+                  <rect class="m-sys" x="430" y="40" width="130" height="70" rx="8"/>
+                  <text x="495" y="60" text-anchor="middle" class="m-b">Shopifyへの商品登録</text>
+                  <text x="440" y="80" class="m-s">シートで価格を入れて選ぶ</text>
+                  <text x="440" y="96" class="m-s">→ 英語の下書きを作成</text>
+                  <path class="m-line" d="M380 130 L380 75 L428 75" marker-end="url(#map-arrow-pc)"/>
+                  <path class="m-line" d="M560 75 L605 75 L605 128" marker-end="url(#map-arrow-pc)"/>
+
+                  <!-- 在庫連動 -->
+                  <rect class="m-sys" x="430" y="150" width="90" height="70" rx="8"/>
+                  <text x="475" y="170" text-anchor="middle" class="m-b">在庫連動</text>
+                  <text x="475" y="188" text-anchor="middle" class="m-s">15分おき</text>
+                  <text x="475" y="202" text-anchor="middle" class="m-s">双方向</text>
+                  <text x="475" y="216" text-anchor="middle" class="m-s">毎朝確認メール</text>
+                  <line class="m-line" x1="410" y1="178" x2="428" y2="178" marker-end="url(#map-arrow-pc)"/>
+                  <line class="m-line" x1="428" y1="194" x2="412" y2="194" marker-end="url(#map-arrow-pc)"/>
+                  <line class="m-line" x1="520" y1="178" x2="538" y2="178" marker-end="url(#map-arrow-pc)"/>
+                  <line class="m-line" x1="538" y1="194" x2="522" y2="194" marker-end="url(#map-arrow-pc)"/>
+
+                  <!-- Googleショッピング -->
+                  <rect class="m-sys" x="280" y="270" width="130" height="62" rx="8"/>
+                  <text x="345" y="290" text-anchor="middle" class="m-b">Googleショッピング</text>
+                  <text x="290" y="308" class="m-s">毎朝、商品データを</text>
+                  <text x="290" y="322" class="m-s">Googleの形式で渡す</text>
+                  <line class="m-line" x1="345" y1="240" x2="345" y2="268" marker-end="url(#map-arrow-pc)"/>
+                  <rect class="m-ext" x="120" y="280" width="130" height="44" rx="8"/>
+                  <text x="185" y="298" text-anchor="middle" class="m-b">Google検索</text>
+                  <text x="185" y="314" text-anchor="middle" class="m-s">ショッピング枠（無料）</text>
+                  <line class="m-line" x1="280" y1="301" x2="252" y2="301" marker-end="url(#map-arrow-pc)"/>
+
+                  <!-- 週次レポート -->
+                  <rect class="m-sys" x="430" y="290" width="240" height="80" rx="8"/>
+                  <text x="550" y="310" text-anchor="middle" class="m-b">週次レポート</text>
+                  <text x="440" y="328" class="m-s">毎週水曜、両店の売上・在庫と</text>
+                  <text x="440" y="342" class="m-s">検索の数字を前週と比べ、</text>
+                  <text x="440" y="356" class="m-s">PDFにしてメールで届ける</text>
+                  <path class="m-line m-dash" d="M400 240 L400 258 L440 258 L440 288" marker-end="url(#map-arrow-pc)"/>
+                  <path class="m-line m-dash" d="M640 240 L640 288" marker-end="url(#map-arrow-pc)"/>
+                  <text x="446" y="278" class="m-s">読む</text>
+                  <path class="m-line m-dash" d="M430 355 L54 355 L54 222" marker-end="url(#map-arrow-pc)"/>
+                  <text x="66" y="349" class="m-s">PDFをメールで</text>
+                </g>
+              </svg>
+
+              <svg class="works__map-sp" viewBox="0 0 340 442" aria-hidden="true">
+                <defs>
+                  <marker id="map-arrow-sp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="m-head" d="M0,0 L10,5 L0,10 z"/></marker>
+                </defs>
+                <g class="m-text m-text--sp">
+                  <!-- 運営者 → Chrome拡張 -->
+                  <rect class="m-ext" x="10" y="10" width="100" height="56" rx="8"/>
+                  <text x="60" y="33" text-anchor="middle" class="m-b">運営者</text>
+                  <text x="60" y="52" text-anchor="middle" class="m-s">最後に判断</text>
+                  <line class="m-line" x1="110" y1="38" x2="138" y2="38" marker-end="url(#map-arrow-sp)"/>
+                  <rect class="m-sys" x="140" y="10" width="190" height="56" rx="8"/>
+                  <text x="235" y="33" text-anchor="middle" class="m-b">Chrome拡張機能</text>
+                  <text x="235" y="52" text-anchor="middle" class="m-s">AIが説明文・色違いを複製</text>
+                  <line class="m-line" x1="235" y1="66" x2="235" y2="94" marker-end="url(#map-arrow-sp)"/>
+
+                  <!-- 国内店 -->
+                  <rect class="m-store" x="10" y="96" width="320" height="52" rx="8"/>
+                  <text x="170" y="118" text-anchor="middle" class="m-b m-inv m-lg">国内店　カラーミーショップ</text>
+                  <text x="170" y="137" text-anchor="middle" class="m-s m-inv">商品データの大元</text>
+
+                  <!-- 3つの仕組み -->
+                  <line class="m-line" x1="60" y1="148" x2="60" y2="176" marker-end="url(#map-arrow-sp)"/>
+                  <line class="m-line" x1="160" y1="148" x2="160" y2="176" marker-end="url(#map-arrow-sp)"/>
+                  <line class="m-line" x1="180" y1="176" x2="180" y2="150" marker-end="url(#map-arrow-sp)"/>
+                  <line class="m-line" x1="280" y1="148" x2="280" y2="176" marker-end="url(#map-arrow-sp)"/>
+
+                  <rect class="m-sys" x="10" y="178" width="100" height="72" rx="8"/>
+                  <text x="60" y="198" text-anchor="middle" class="m-b">Google</text>
+                  <text x="60" y="214" text-anchor="middle" class="m-b">ショッピング</text>
+                  <text x="60" y="236" text-anchor="middle" class="m-s">毎朝データ送信</text>
+
+                  <rect class="m-sys" x="120" y="178" width="100" height="72" rx="8"/>
+                  <text x="170" y="198" text-anchor="middle" class="m-b">在庫連動</text>
+                  <text x="170" y="220" text-anchor="middle" class="m-s">15分おき</text>
+                  <text x="170" y="236" text-anchor="middle" class="m-s">双方向</text>
+
+                  <rect class="m-sys" x="230" y="178" width="100" height="72" rx="8"/>
+                  <text x="280" y="198" text-anchor="middle" class="m-b">商品登録</text>
+                  <text x="280" y="220" text-anchor="middle" class="m-s">シートから</text>
+                  <text x="280" y="236" text-anchor="middle" class="m-s">英語の下書き</text>
+
+                  <line class="m-line" x1="60" y1="250" x2="60" y2="278" marker-end="url(#map-arrow-sp)"/>
+                  <line class="m-line" x1="160" y1="250" x2="160" y2="278" marker-end="url(#map-arrow-sp)"/>
+                  <line class="m-line" x1="180" y1="278" x2="180" y2="252" marker-end="url(#map-arrow-sp)"/>
+                  <line class="m-line" x1="280" y1="250" x2="280" y2="278" marker-end="url(#map-arrow-sp)"/>
+
+                  <!-- Google検索 / 海外店 -->
+                  <rect class="m-ext" x="10" y="280" width="100" height="52" rx="8"/>
+                  <text x="60" y="302" text-anchor="middle" class="m-b">Google検索</text>
+                  <text x="60" y="320" text-anchor="middle" class="m-s">ショッピング枠</text>
+                  <rect class="m-store" x="120" y="280" width="210" height="52" rx="8"/>
+                  <text x="225" y="302" text-anchor="middle" class="m-b m-inv m-lg">海外店　Shopify</text>
+                  <text x="225" y="321" text-anchor="middle" class="m-s m-inv">英語・12か国</text>
+
+                  <!-- 週次レポート -->
+                  <path class="m-line m-dash" d="M225 332 L225 360" marker-end="url(#map-arrow-sp)"/>
+                  <text x="233" y="351" class="m-s">両店の数字を読む</text>
+                  <rect class="m-sys" x="10" y="362" width="320" height="70" rx="8"/>
+                  <text x="170" y="384" text-anchor="middle" class="m-b">週次レポート</text>
+                  <text x="170" y="404" text-anchor="middle" class="m-s">毎週水曜、売上・在庫・検索の数字を</text>
+                  <text x="170" y="420" text-anchor="middle" class="m-s">前週と比べ、PDFで運営者に届ける</text>
+                </g>
+              </svg>
+
+            </div>
+            <figcaption class="works__map-caption">
+              <span class="works__map-legend"><i class="works__map-key works__map-key--store"></i>お店</span>
+              <span class="works__map-legend"><i class="works__map-key works__map-key--sys"></i>作った仕組み</span>
+              <span class="works__map-legend"><i class="works__map-key works__map-key--ext"></i>人・外部サービス</span>
+              <span class="works__map-note">国内店の商品データを元に、ほかの仕組みがつながって動いています。</span>
+            </figcaption>
+          </figure>
+
           <!-- 01 数字を見える化する -->
           <div class="works__group">
             <div class="works__group-header fade-in">
