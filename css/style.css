@@ -862,6 +862,11 @@ button {
   border-top: 1px solid var(--color-border);
 }
 
+/* 大きく扱う事例のあとに続くカード */
+.works__feature + .works__case-grid {
+  margin-top: 32px;
+}
+
 /* 大きく扱う事例（週次レポート） */
 .works__feature {
   display: grid;

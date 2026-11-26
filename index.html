@@ -635,6 +635,50 @@
               <h4 class="works__group-title">売上・集客を伸ばす</h4>
             </div>
 
+            <article class="works__feature fade-in">
+              <div class="works__feature-body">
+                <h5 class="works__case-title">Instagramの投稿を国内・海外の2アカウントで自動化</h5>
+                <p class="works__stat">
+                  <span class="works__stat-value">2<span class="works__stat-unit">アカウント</span></span>
+                  <span class="works__stat-label">新商品とコーディネートを、決まった曜日の18時に自動で投稿。海外向けの英語の文章はAIが書く</span>
+                </p>
+                <div class="works__flow" role="img" aria-label="仕組みの流れ：ショップの新商品と月1回のフォームから、投稿文と商品タグを作り、海外向けの英語は Claude API が書いて、国内・海外の Instagram に自動で投稿する">
+                  <span class="works__flow-node">新商品<br>＋月1回の<br>フォーム</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→<small>毎日</small></span>
+                  <span class="works__flow-node">投稿文・<br>商品タグ・<br>英語の文章</span>
+                  <span class="works__flow-arrow" aria-hidden="true">→<small>18時</small></span>
+                  <span class="works__flow-node">Instagram<br>国内・海外</span>
+                </div>
+                <dl class="works__case-detail">
+                  <div>
+                    <dt>課題</dt>
+                    <dd>投稿のたびに投稿文・商品タグ・ハッシュタグを手で入れ、海外向けは写真をAIに渡して英語の文章を作り直していました。新商品の投稿を忘れることもありました。</dd>
+                  </div>
+                  <div>
+                    <dt>仕組み</dt>
+                    <dd>ショップに登録した新商品を毎日読み込み、月・木の18時に国内・海外の両方へ投稿。コーディネートは月1回フォームでサイズを押して送るだけで、水曜に写真・金曜にリールが出ます。品番からInstagramショッピングの商品タグを自動で付け、海外向けの英語の文章はClaude APIが写真と商品説明から書きます。</dd>
+                  </div>
+                  <div>
+                    <dt>工夫</dt>
+                    <dd>型で作れる文は型で作り、AIは「写真を見て着こなしを説明する」ところだけに使用（1回 約11円）。APIでできないことは公式の資料と試しの投稿で先に確かめ、効果の薄いストーリーズの自動化は作らないと提案しました。</dd>
+                  </div>
+                </dl>
+                <ul class="works__tags">
+                  <li class="works__tag">Google Apps Script</li>
+                  <li class="works__tag">Instagram Graph API</li>
+                  <li class="works__tag">Claude API</li>
+                  <li class="works__tag">Shopify Admin API</li>
+                  <li class="works__tag">カラーミーショップAPI</li>
+                </ul>
+              </div>
+              <figure class="works__feature-image">
+                <a href="images/works/instagram-auto.webp" target="_blank" rel="noopener">
+                  <img src="images/works/instagram-auto.webp" alt="Instagram自動投稿の仕組みの図と、Claude APIに渡した内容・返ってきた英語の文章の実例" loading="lazy" width="1200" height="913">
+                </a>
+                <figcaption>仕組みの図と、AIが書いた英語の文章の実例</figcaption>
+              </figure>
+            </article>
+
             <div class="works__case-grid">
 
               <article class="works__case fade-in">

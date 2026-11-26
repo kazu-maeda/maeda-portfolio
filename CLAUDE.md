@@ -119,3 +119,7 @@ GitHubリポジトリ(`kazu-maeda/maeda-portfolio`)にpushすると、Vercel側�
 - ヒーロー背景画像を`images/FV.png`(1.8MB)から`images/FV.webp`(75KB、1536×1024、cwebp q88)に差し替え。初回表示の転送量の約9割を占めていたため。元PNGとの比較で見た目の差は無し(PSNR 43.9dB)。`FV.png`は戻せるよう残してある(どこからも参照していない)
 - 実績の「EC運営の仕組みづくり」を4件→8件にし、見せ方を作り直した。役割ごとの3グループ(01 数字を見える化する / 02 手間を減らす / 03 売上・集客を伸ばす)、各事例は「成果の数字(大)→流れの図→課題→仕組み→タグ」の順。週次レポートは大きく扱い、PDFの見本画像`images/works/weekly-report.webp`を載せた。見本はE-GANGの`weekly-report/report-core.js`の`reportBuildHtml`にダミーの数字を入れて作ったもので、実際の売上は載せていない(画像内とキャプションに「数値・商品名はダミー」と明記)
 - 事例の数字や事実は、E-GANGフォルダの`CLAUDE.md`(作業記録)が出典。直すときはそちらと食い違わないようにする
+
+### 2026-11-26
+
+- 実績の「03 売上・集客を伸ばす」の先頭に、Instagram の自動投稿（国内・海外の2アカウント、Claude API で海外向けの英語の文章）を大きく扱う事例として追加。画像`images/works/instagram-auto.webp`(1200×913)は、E-GANGフォルダの`説明資料/クラウドワークス用/08_Instagram自動投稿.pdf`の2ページ目（仕組みの図とAIの文章の実例）を切り出したもの。大きい事例のあとにカードが続くよう、`.works__feature + .works__case-grid`の余白を足した
