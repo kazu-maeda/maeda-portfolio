@@ -123,3 +123,4 @@ GitHubリポジトリ(`kazu-maeda/maeda-portfolio`)にpushすると、Vercel側�
 ### 2026-11-26
 
 - 実績の「03 売上・集客を伸ばす」の先頭に、Instagram の自動投稿（国内・海外の2アカウント、Claude API で海外向けの英語の文章）を大きく扱う事例として追加。画像`images/works/instagram-auto.webp`(1200×913)は、E-GANGフォルダの`説明資料/クラウドワークス用/08_Instagram自動投稿.pdf`の2ページ目（仕組みの図とAIの文章の実例）を切り出したもの。大きい事例のあとにカードが続くよう、`.works__feature + .works__case-grid`の余白を足した
+- 実績の全体図（PC・スマホの2つの SVG）に「Instagramの自動投稿」と「Instagram（国内・海外）」を追加。PCは国内店の上、スマホは週次レポートの下（viewBox 340×442→540）

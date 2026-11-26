@@ -333,13 +333,26 @@
 
           <!-- 全体の構成図（PCは横長、900px以下は縦長の図に切り替え） -->
           <figure class="works__map fade-in">
-            <div class="works__map-figure" role="img" aria-label="仕組みの全体図：運営者が Chrome 拡張機能で国内店（カラーミーショップ）に商品を登録。その商品データを元に、Google ショッピングへの掲載、海外店（Shopify）への商品登録、2店舗の在庫連動を自動で行い、週次レポートが両店の数字をまとめて運営者に届ける">
+            <div class="works__map-figure" role="img" aria-label="仕組みの全体図：運営者が Chrome 拡張機能で国内店（カラーミーショップ）に商品を登録。その商品データを元に、Google ショッピングへの掲載、海外店（Shopify）への商品登録、2店舗の在庫連動、国内・海外のInstagramへの自動投稿（英語の文章はAIが作成）を行い、週次レポートが両店の数字をまとめて運営者に届ける">
 
               <svg class="works__map-pc" viewBox="0 0 680 380" aria-hidden="true">
                 <defs>
                   <marker id="map-arrow-pc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="m-head" d="M0,0 L10,5 L0,10 z"/></marker>
                 </defs>
                 <g class="m-text">
+                  <!-- Instagram自動投稿 -->
+                  <rect class="m-ext" x="10" y="38" width="92" height="64" rx="8"/>
+                  <text x="56" y="64" text-anchor="middle" class="m-b">Instagram</text>
+                  <text x="56" y="82" text-anchor="middle" class="m-s">国内・海外</text>
+                  <rect class="m-sys" x="130" y="20" width="230" height="92" rx="8"/>
+                  <text x="245" y="40" text-anchor="middle" class="m-b">Instagramの自動投稿</text>
+                  <text x="140" y="60" class="m-s">・新商品を月・木の18時に投稿</text>
+                  <text x="140" y="76" class="m-s">・コーディネートは月1回フォームで</text>
+                  <text x="140" y="92" class="m-s">・海外向けの英語はAI（Claude）</text>
+                  <text x="140" y="106" class="m-s">・商品タグも自動で付ける</text>
+                  <line class="m-line" x1="130" y1="70" x2="104" y2="70" marker-end="url(#map-arrow-pc)"/>
+                  <line class="m-line" x1="330" y1="130" x2="330" y2="114" marker-end="url(#map-arrow-pc)"/>
+
                   <!-- 運営者 -->
                   <rect class="m-ext" x="10" y="150" width="88" height="70" rx="8"/>
                   <text x="54" y="176" text-anchor="middle" class="m-b">運営者</text>
@@ -415,7 +428,7 @@
                 </g>
               </svg>
 
-              <svg class="works__map-sp" viewBox="0 0 340 442" aria-hidden="true">
+              <svg class="works__map-sp" viewBox="0 0 340 540" aria-hidden="true">
                 <defs>
                   <marker id="map-arrow-sp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="m-head" d="M0,0 L10,5 L0,10 z"/></marker>
                 </defs>
@@ -476,6 +489,17 @@
                   <text x="170" y="384" text-anchor="middle" class="m-b">週次レポート</text>
                   <text x="170" y="404" text-anchor="middle" class="m-s">毎週水曜、売上・在庫・検索の数字を</text>
                   <text x="170" y="420" text-anchor="middle" class="m-s">前週と比べ、PDFで運営者に届ける</text>
+
+                  <!-- Instagram自動投稿 -->
+                  <rect class="m-sys" x="10" y="448" width="210" height="84" rx="8"/>
+                  <text x="115" y="470" text-anchor="middle" class="m-b">Instagramの自動投稿</text>
+                  <text x="115" y="490" text-anchor="middle" class="m-s">両店の商品から投稿文を作成</text>
+                  <text x="115" y="507" text-anchor="middle" class="m-s">英語の文章はAI（Claude）</text>
+                  <text x="115" y="524" text-anchor="middle" class="m-s">月・木・水・金の18時</text>
+                  <line class="m-line" x1="220" y1="490" x2="238" y2="490" marker-end="url(#map-arrow-sp)"/>
+                  <rect class="m-ext" x="240" y="458" width="90" height="64" rx="8"/>
+                  <text x="285" y="484" text-anchor="middle" class="m-b">Instagram</text>
+                  <text x="285" y="503" text-anchor="middle" class="m-s">国内・海外</text>
                 </g>
               </svg>
 
